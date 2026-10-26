@@ -28,6 +28,42 @@
       "created_at": "2026-10-26T00:56:15.949Z",
       "sender": "macOS",
       "is_cancelled": false
+    },
+    {
+      "id": "326ddc70-d0cb-438e-93c2-778af3fd6ed8",
+      "role": "user",
+      "content": "Corrija o horário",
+      "status": "cancelled",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-10-26T00:56:28.839Z",
+      "sender": "ios",
+      "is_cancelled": true
+    },
+    {
+      "id": "7742f7f7-e8ff-4194-8a9b-12cacbe86659",
+      "role": "user",
+      "content": "Esta sessão é da antigravidade do Google!?",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-10-26T00:57:21.509Z",
+      "sender": "ios",
+      "is_cancelled": false
+    },
+    {
+      "id": "b663f59d-253c-4c70-a8db-126796f6c9fe",
+      "role": "agent",
+      "content": "Sim! Eu sou o **Antigravity**, o assistente de código com inteligência artificial desenvolvido pela equipe do Google DeepMind.\n\nSobre a sua mensagem anterior para **corrigir o horário**: o servidor/ambiente por padrão registra os eventos no horário universal (**UTC**), o que gera uma diferença em relação ao horário de Brasília (UTC-3). \n\nSe você estiver se referindo a isso ou precisar ajustar o fuso horário para o Brasil (ou para o seu horário local no projeto), me confirme qual é o seu fuso/horário desejado que eu configuro para você! Como posso te ajudar com o seu projeto agora?",
+      "status": "completed",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "7742f7f7-e8ff-4194-8a9b-12cacbe86659",
+      "created_at": "2026-10-26T00:57:28.480Z",
+      "sender": "macOS",
+      "is_cancelled": false
     }
   ]
 }
