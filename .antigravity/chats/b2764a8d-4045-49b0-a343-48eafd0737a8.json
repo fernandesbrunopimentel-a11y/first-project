@@ -3,6 +3,31 @@
   "name": "Make a personal portfolio site",
   "createdAt": "2026-10-26T00:54:43.035Z",
   "filename": "b2764a8d-4045-49b0-a343-48eafd0737a8.json",
-  "geminiStarted": false,
-  "messages": []
+  "geminiStarted": true,
+  "messages": [
+    {
+      "id": "df926059-d950-474d-9ee0-16290c1dcca4",
+      "role": "user",
+      "content": "Escreva em Português Br",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-10-26T00:56:08.762Z",
+      "sender": "ios",
+      "is_cancelled": false
+    },
+    {
+      "id": "d4812555-e53d-4053-96b7-23d83041e6ee",
+      "role": "agent",
+      "content": "Combinado! A partir de agora vou responder sempre em Português do Brasil.\n\nComo posso ajudar você com o projeto hoje?",
+      "status": "completed",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "df926059-d950-474d-9ee0-16290c1dcca4",
+      "created_at": "2026-10-26T00:56:15.949Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    }
+  ]
 }
