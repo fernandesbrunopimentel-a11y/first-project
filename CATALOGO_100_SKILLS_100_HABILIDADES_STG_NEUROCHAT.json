@@ -1,0 +1,2211 @@
+{
+  "schema": "fisioimagem-stg-neurochat-100-skills-100-capabilities/v1",
+  "skills_count": 100,
+  "capabilities_count": 100,
+  "domains_count": 5,
+  "skills": [
+    {
+      "id": "SKL-001",
+      "slug": "roas-marginal-cbo-meta",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Cálculo de ROAS marginal por conjunto CBO Meta Ads x receita STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-002",
+      "slug": "cac-ponderado-10-canais",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Custo de Aquisição de Paciente (CAC) ponderado nos 10 canais NeuroChat",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-003",
+      "slug": "ltv-coorte-16-anos-stg",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Lifetime Value (LTV) atuarial sobre a base histórica de 16 anos do STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-004",
+      "slug": "margem-contribuicao-tomo-216",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Margem líquida unitária da âncora Tomografia R$ 216,00 Dom/Seg",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-005",
+      "slug": "elasticidade-terca-265",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Elasticidade preço-demanda da Terça Especial R$ 265,00",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-006",
+      "slug": "desconto-lab-16pct-breakeven",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Ponto de equilíbrio do desconto Laboratorial de 16% por cesta de exames",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-007",
+      "slug": "waba-6827-ctwa-72h-arbitrage",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Otimização de janela gratuita CTWA 72h vs templates pagos Marketing USD",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-008",
+      "slug": "ticket-medio-blended-modalidade",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Decomposição de ticket médio misto por modalidade clínica STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-009",
+      "slug": "agenda-vs-caixa-reconciliacao",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Conciliação estrita entre produção agendada STG e arrecadação efetiva",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-010",
+      "slug": "custo-oportunidade-spend-cap",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Perda financeira horária por travamento de spend_cap na conta Meta Ads",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-011",
+      "slug": "payback-imediato-lead-pago",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Payback em horas entre clique CTWA e realização do exame no STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-012",
+      "slug": "alocacao-orcamento-kelly-ads",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Critério de Kelly fracionário para realocação segura entre AdSets",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-013",
+      "slug": "custo-por-agendamento-confirmado",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "CPA real auditado por guia confirmada no STG Saúde",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-014",
+      "slug": "receita-recorrente-pacientes-base",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Faturamento gerado por pacientes recorrentes vs novos leads digitais",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-015",
+      "slug": "dre-sintetica-clinica-mensal",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Estruturação de DRE gerencial mensal sanitizada por centro de custo",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-016",
+      "slug": "auditoria-glosa-particular-convenio",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Monitoramento da proporção Particular (99,9%) vs Convênios no STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-017",
+      "slug": "indice-eficiencia-atendente-receita",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Receita clínica atribuída por carteira individual das 4 atendentes",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-018",
+      "slug": "custo-por-minuto-espera-fila",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Valoração monetária do abandono de fila por minuto de atraso SLA",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-019",
+      "slug": "fluxo-caixa-semanal-ultima-semana",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Modelagem do pico histórico de fechamento na última semana de cada mês",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-020",
+      "slug": "stress-test-cambio-usd-waba",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "domain_title": "Engenharia Financeira Clínica, ROAS, CAC & Margem de Contribuição",
+      "description": "Sensibilidade cambial USD/BRL sobre faturas mensais WABA 6827",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-021",
+      "slug": "erlang-c-fila-4-atendentes",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Dimensionamento Erlang-C para 4 atendentes (Wanessa, Andressa, Gabrielly, Bruno)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-022",
+      "slug": "markov-transicao-lead-exame",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Cadeia de Markov de estados PENDING -> IN_PROGRESS -> STG_REALIZADO",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-023",
+      "slug": "intervalo-confianca-wilson-conversao",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Intervalo de confiança de Wilson (95%) para taxas de conversão mensais",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-024",
+      "slug": "decomposicao-stl-sazonalidade",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Decomposição sazonal STL de séries diárias e semanais do STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-025",
+      "slug": "filtro-kalman-demanda-diaria",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Filtro de Kalman unidimensional para suavização de demanda diária",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-026",
+      "slug": "teste-hipotese-mann-whitney-junho",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Teste não-paramétrico Mann-Whitney U para queda de Junho vs meses pares",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-027",
+      "slug": "regressao-quantilica-p33-conservadora",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Regressão quantílica no percentil P33 para piso conservador blindado",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-028",
+      "slug": "entropia-shannon-distribuicao-canais",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Entropia de Shannon para medir concentração vs diversificação de canais",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-029",
+      "slug": "processo-poisson-chegada-webhooks",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Modelagem não-homogênea de Poisson para picos de webhooks 05:30–21:00",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-030",
+      "slug": "lei-de-little-wip-sessoes",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Aplicação da Lei de Little (L = lambda * W) às 866 sessões ativas",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-031",
+      "slug": "bootstrap-nao-parametrico-receita",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Reamostragem determinística para bandas de incerteza de faturamento",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-032",
+      "slug": "correlacao-spearman-waba-stg",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Correlação de postos de Spearman entre volume WABA e guias STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-033",
+      "slug": "deteccao-anomalia-zscore-robusto",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Z-Score robusto baseado em MAD (Median Absolute Deviation) para quedas",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-034",
+      "slug": "curva-sobrevivencia-kaplan-meier-lead",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Curva de sobrevivência do lead entre primeiro contato e agendamento",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-035",
+      "slug": "otimizacao-programacao-linear-salas",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Alocação ótima de salas de Tomografia e Ultrassom sob restrição de agenda",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-036",
+      "slug": "indice-gini-carga-equipe",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Índice de Gini para auditar balanceamento justo de leads entre atendentes",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-037",
+      "slug": "suavizacao-exponencial-holt-winters",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Suavização Holt-Winters amortecida para projeção de curto prazo",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-038",
+      "slug": "distancia-mahalanobis-outliers",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Detecção multivariada de dias atípicos por feriado ou indisponibilidade",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-039",
+      "slug": "bayes-empirico-conversao-pino-geo",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Estimador Bayesiano empírico para conversão nos 80 pinos do Sertão Central",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-040",
+      "slug": "calculo-diferencial-taxa-instantanea",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "domain_title": "Modelagem Matemática, Estatística Inferencial & Teoria das Filas",
+      "description": "Derivada discreta de aceleração semanal de agendamentos no fim do mês",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-041",
+      "slug": "blake2b-csprng-ephemeral-join",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Join criptográfico volátil em RAM com chave BLAKE2b efêmera por execução",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-042",
+      "slug": "normalizacao-nono-digito-ceara-ddd88",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Normalização canônica de 8 dígitos tolerante ao 9º dígito no DDD 88/85",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-043",
+      "slug": "matching-nome-3tokens-anti-homonimo",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": " pareamento estrito de nomes >= 3 tokens filtrando homônimos comuns",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-044",
+      "slug": "janela-temporal-bidirecional-30d",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Atribuição bidirecional [-30d, +30d] entre contato digital e data_exame",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-045",
+      "slug": "deduplicacao-paciente-multi-exame",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Consolidação de múltiplos procedimentos no mesmo dia em episódio clínico",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-046",
+      "slug": "classificador-pre-agendado-vs-retorno",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Separação exata entre pré-agendamento (-30..-1d), mesmo dia e retorno (+1..+30d)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-047",
+      "slug": "leitura-sqlite-uri-readonly-wal",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Acesso estrito ?mode=ro sem lock de escrita em bancos SQLite WAL ativos",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-048",
+      "slug": "fusao-5-fontes-omnichannel",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Unificação sem duplicidade de Smartbook, Cortex, Archive, Ultra50k e Meta CSV",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-049",
+      "slug": "cruzamento-sla-breach-vs-stg",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": " Rastreamento de quantos leads sem resposta converteram ou perderam no STG",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-050",
+      "slug": "higienizacao-acentos-unicode-nfkd",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Padronização NFKD ASCII de nomes clínicos antes da hash em memória",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-051",
+      "slug": "filtro-ddd85-fortaleza-leak-audit",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Auditoria de leads fora da região alvo (DDD 85/11 vs DDD 88 Sertão Central)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-052",
+      "slug": "reconciliacao-data-ddmmyyyy-iso8601",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Parser resiliente multi-formato (DD/MM/YYYY, ISO-8601 e Unix Epoch UTC)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-053",
+      "slug": "particionamento-mensal-abr-out-2026",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Cubo analítico particionado mês a mês de Abril a Outubro de 2026",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-054",
+      "slug": "auditoria-cobertura-cache-parcial",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Detecção automática de corte temporal do cache (ex.: 20/10/2026)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-055",
+      "slug": "lineage-criptografico-sha256-json",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Assinatura SHA-256 de integridade de cada relatório agregado gerado",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-056",
+      "slug": "verificador-dlp-zero-pii-saida",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Varredura estática garantindo 0 CPFs, 0 telefones e 0 nomes nos artefatos",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-057",
+      "slug": "mapeamento-grupos-procedimentos-tuss",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Classificação padronizada de códigos TUSS STG em grupos executivos",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-058",
+      "slug": "detector-recontato-30-60-90d",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Análise de frequência de retorno de pacientes crônicos e check-ups",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-059",
+      "slug": "conciliador-sessoes-ocultas-archived",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Auditoria do impacto do botão Ocultar (ARCHIVED) na fila ativa",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-060",
+      "slug": "indexador-rag-8260-evidencias",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "domain_title": "Engenharia de Dados, Cruzamento Determinístico STG × NeuroChat (`-30d/+30d`) & Zero-PII",
+      "description": "Publicação estruturada de metadados analíticos para busca híbrida FAISS+BM25",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-061",
+      "slug": "contrafactual-junho-sem-fisioaura",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Estimativa contrafactual de Junho/2026 sem desconexão do webhook FISIOAURA",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-062",
+      "slug": "contrafactual-agosto-sem-apagao-dc",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Reconstrução do volume de Agosto/2026 sem colapso de -93,6% na WABA 6827",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-063",
+      "slug": "pro-rata-conservador-outubro-31d",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Fechamento conservador de Outubro/2026 (20 dias observados + 11 dias piso)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-064",
+      "slug": "rumo-hoje-steady-state-31-10-2026",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Cálculo do patamar atual estabilizado de agendamentos em 31/10/2026",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-065",
+      "slug": "uplift-coexistence-oficial-v4",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Modelagem conservadora de +12% com WhatsApp Coexistence Oficial 3915+2270",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-066",
+      "slug": "recuperacao-18pct-fila-sem-resposta",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Taxa conservadora de resgate sobre pacientes afetados por SLA breach",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-067",
+      "slug": "projecao-nov-dez-2026-sazonal",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Projeção de fechamento do 4º trimestre respeitando feriados de fim de ano",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-068",
+      "slug": "banda-pessimista-base-otimista",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Três cenários parametrizados (Piso P33, Conservador Base, Teto Operacional)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-069",
+      "slug": "capacidade-maxima-tomografo-turno",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Teto físico de ocupação de Tomografia em janela diurna e plantão",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-070",
+      "slug": "simulacao-destravamento-spend-cap",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Impacto projetado em 7/15/30 dias após ajuste autorizado do spend_cap",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-071",
+      "slug": "modelo-amortecimento-pos-incidente",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Curva de recuperação de reputação algorítmica após queda de webhook",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-072",
+      "slug": "forecast-demanda-exames-imagem-usg",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Previsão dedicada para Ultrassonografia Obstétrica, Doppler e Abdome",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-073",
+      "slug": "forecast-demanda-laboratorio-16off",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Previsão de volume de análises clínicas com campanha 16% OFF",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-074",
+      "slug": "elasticidade-tempo-resposta-15ms",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Ganho de conversão por redução de TTFB de minutos para <15ms na borda",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-075",
+      "slug": "backtesting-erro-mape-abr-set",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Validação de erro percentual absoluto médio (MAPE) sobre meses fechados",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-076",
+      "slug": "meta-diaria-atendente-quixeramobim",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Desdobramento da projeção mensal em meta diária justa por atendente",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-077",
+      "slug": "alerta-precoce-desvio-meta-semanal",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Gatilho matemático se o ritmo dos primeiros 10 dias cair abaixo do P33",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-078",
+      "slug": "cenario-migracao-100pct-meta-oficial",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Comparativo de estabilidade entre Z-API legada e 100% Cloud API Oficial",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-079",
+      "slug": "impacto-retencao-midia-60d-ui",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Ganho de produtividade de atendimento com expurgo de banners/bots pesados",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-080",
+      "slug": "matriz-risco-dependencia-canal",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "domain_title": "Projeções Conservadoras, Contrafactuais de Indisponibilidade & Simulação Executiva",
+      "description": "Quantificação de resiliência com fallback automático WTS/FLW/Hunion",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-081",
+      "slug": "openpyxl-formulas-dinamicas-ptbr",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Geração nativa de planilhas .xlsx com fórmulas SUM, IFERROR e formatação BRL",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-082",
+      "slug": "abas-executivas-congelamento-paineis",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Layout corporativo com freeze_panes, larguras automáticas e cabeçalho escuro",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-083",
+      "slug": "painel-html5-svg-zero-cloudflare",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Dashboard responsivo autônomo hospedado em GitHub Pages (Fastly CDN)",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-084",
+      "slug": "preview-opengraph-whatsapp-diretoria",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Meta tags OpenGraph otimizadas para compartilhamento imediato no WhatsApp",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-085",
+      "slug": "modo-apresentacao-google-meet",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Layout widescreen de alto contraste para tela compartilhada no Google Meet",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-086",
+      "slug": "orquestrador-opencode-tokens-reais",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Despacho paralelo via CLI opencode v2.2.5 com auditoria JSON de tokens",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-087",
+      "slug": "auditoria-cruzada-4-modelos-opencode",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Consenso entre DeepSeek-v4.1, GLM-5.3, Big-Pickle e Flint-40B no OpenCode",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-088",
+      "slug": "ponte-sessao-agy-opencode-hub",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Utilitário CLI agy-opencode-hub para uso contínuo sob demanda na sessão",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-089",
+      "slug": "scanner-gitleaks-pre-commit-dlp",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Portão determinístico bloqueando segredos, .db ativos e PII antes do git push",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-090",
+      "slug": "espelhamento-drive-32tb-sem-sqlite",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Backup atômico em cortex_cerebral excluindo .db/.wal/.shm ativos",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-091",
+      "slug": "reconciliacao-journal-cooperativo",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Coordenação multi-sessão em journal.py respeitando locks de outros chats",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-092",
+      "slug": "absorcao-forense-transcript-3257-steps",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Extração e validação integral de artefatos e testes de sessões irmãs",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-093",
+      "slug": "certificacao-pytest-exit-zero",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Bateria automatizada de testes unitários e de contrato com Exit Code 0",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-094",
+      "slug": "assinatura-manifesto-sha256-recibo",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Geração de recibos criptográficos auditáveis em todas as entregas",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-095",
+      "slug": "verificador-headers-cdn-nao-cloudflare",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Prova HTTP confirmando Server: GitHub.com sem proxy Cloudflare",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-096",
+      "slug": "exportador-csv-tsv-limpo-bi",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Geração de tabelas planas sanitizadas compatíveis com Excel/Sheets/Tableau",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-097",
+      "slug": "sintese-executiva-linguagem-diretoria",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Tradução de telemetria complexa em decisões claras de negócio em Português",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-098",
+      "slug": "governanca-zero-mutacao-meta-ads",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Bloqueio estrito contra alterações não autorizadas na conta act_1349166316118823",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-099",
+      "slug": "politica-zero-idle-api-drain",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Encerramento imediato de workers após cada análise sem loops infinitos",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    },
+    {
+      "id": "SKL-100",
+      "slug": "catalogo-interativo-100x100-busca",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "domain_title": "Automação Excel `.xlsx`, Painéis Executivos Não-Cloudflare, Agentes OpenCode & Governança",
+      "description": "Explorador instantâneo no painel web para filtrar as 100 skills e 100 habilidades",
+      "rag_indexed": true,
+      "zero_pii_enforced": true
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "HAB-001",
+      "paired_skill_id": "SKL-001",
+      "capability_name": "exec_roas_marginal_cbo_meta",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Cálculo de ROAS marginal por conjunto CBO Meta Ads x receita STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-002",
+      "paired_skill_id": "SKL-002",
+      "capability_name": "exec_cac_ponderado_10_canais",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Custo de Aquisição de Paciente (CAC) ponderado nos 10 canais NeuroChat",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-003",
+      "paired_skill_id": "SKL-003",
+      "capability_name": "exec_ltv_coorte_16_anos_stg",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Lifetime Value (LTV) atuarial sobre a base histórica de 16 anos do STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-004",
+      "paired_skill_id": "SKL-004",
+      "capability_name": "exec_margem_contribuicao_tomo_216",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Margem líquida unitária da âncora Tomografia R$ 216,00 Dom/Seg",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-005",
+      "paired_skill_id": "SKL-005",
+      "capability_name": "exec_elasticidade_terca_265",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Elasticidade preço-demanda da Terça Especial R$ 265,00",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-006",
+      "paired_skill_id": "SKL-006",
+      "capability_name": "exec_desconto_lab_16pct_breakeven",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Ponto de equilíbrio do desconto Laboratorial de 16% por cesta de exames",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-007",
+      "paired_skill_id": "SKL-007",
+      "capability_name": "exec_waba_6827_ctwa_72h_arbitrage",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Otimização de janela gratuita CTWA 72h vs templates pagos Marketing USD",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-008",
+      "paired_skill_id": "SKL-008",
+      "capability_name": "exec_ticket_medio_blended_modalidade",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Decomposição de ticket médio misto por modalidade clínica STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-009",
+      "paired_skill_id": "SKL-009",
+      "capability_name": "exec_agenda_vs_caixa_reconciliacao",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Conciliação estrita entre produção agendada STG e arrecadação efetiva",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-010",
+      "paired_skill_id": "SKL-010",
+      "capability_name": "exec_custo_oportunidade_spend_cap",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Perda financeira horária por travamento de spend_cap na conta Meta Ads",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-011",
+      "paired_skill_id": "SKL-011",
+      "capability_name": "exec_payback_imediato_lead_pago",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Payback em horas entre clique CTWA e realização do exame no STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-012",
+      "paired_skill_id": "SKL-012",
+      "capability_name": "exec_alocacao_orcamento_kelly_ads",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Critério de Kelly fracionário para realocação segura entre AdSets",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-013",
+      "paired_skill_id": "SKL-013",
+      "capability_name": "exec_custo_por_agendamento_confirmado",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: CPA real auditado por guia confirmada no STG Saúde",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-014",
+      "paired_skill_id": "SKL-014",
+      "capability_name": "exec_receita_recorrente_pacientes_base",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Faturamento gerado por pacientes recorrentes vs novos leads digitais",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-015",
+      "paired_skill_id": "SKL-015",
+      "capability_name": "exec_dre_sintetica_clinica_mensal",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Estruturação de DRE gerencial mensal sanitizada por centro de custo",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-016",
+      "paired_skill_id": "SKL-016",
+      "capability_name": "exec_auditoria_glosa_particular_convenio",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Monitoramento da proporção Particular (99,9%) vs Convênios no STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-017",
+      "paired_skill_id": "SKL-017",
+      "capability_name": "exec_indice_eficiencia_atendente_receita",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Receita clínica atribuída por carteira individual das 4 atendentes",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-018",
+      "paired_skill_id": "SKL-018",
+      "capability_name": "exec_custo_por_minuto_espera_fila",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Valoração monetária do abandono de fila por minuto de atraso SLA",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-019",
+      "paired_skill_id": "SKL-019",
+      "capability_name": "exec_fluxo_caixa_semanal_ultima_semana",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Modelagem do pico histórico de fechamento na última semana de cada mês",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-020",
+      "paired_skill_id": "SKL-020",
+      "capability_name": "exec_stress_test_cambio_usd_waba",
+      "domain_code": "FINANCEIRO_CLINICO_ROAS",
+      "operational_action": "Executa de forma determinística e auditável: Sensibilidade cambial USD/BRL sobre faturas mensais WABA 6827",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-021",
+      "paired_skill_id": "SKL-021",
+      "capability_name": "exec_erlang_c_fila_4_atendentes",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Dimensionamento Erlang-C para 4 atendentes (Wanessa, Andressa, Gabrielly, Bruno)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-022",
+      "paired_skill_id": "SKL-022",
+      "capability_name": "exec_markov_transicao_lead_exame",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Cadeia de Markov de estados PENDING -> IN_PROGRESS -> STG_REALIZADO",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-023",
+      "paired_skill_id": "SKL-023",
+      "capability_name": "exec_intervalo_confianca_wilson_conversao",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Intervalo de confiança de Wilson (95%) para taxas de conversão mensais",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-024",
+      "paired_skill_id": "SKL-024",
+      "capability_name": "exec_decomposicao_stl_sazonalidade",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Decomposição sazonal STL de séries diárias e semanais do STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-025",
+      "paired_skill_id": "SKL-025",
+      "capability_name": "exec_filtro_kalman_demanda_diaria",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Filtro de Kalman unidimensional para suavização de demanda diária",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-026",
+      "paired_skill_id": "SKL-026",
+      "capability_name": "exec_teste_hipotese_mann_whitney_junho",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Teste não-paramétrico Mann-Whitney U para queda de Junho vs meses pares",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-027",
+      "paired_skill_id": "SKL-027",
+      "capability_name": "exec_regressao_quantilica_p33_conservadora",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Regressão quantílica no percentil P33 para piso conservador blindado",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-028",
+      "paired_skill_id": "SKL-028",
+      "capability_name": "exec_entropia_shannon_distribuicao_canais",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Entropia de Shannon para medir concentração vs diversificação de canais",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-029",
+      "paired_skill_id": "SKL-029",
+      "capability_name": "exec_processo_poisson_chegada_webhooks",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Modelagem não-homogênea de Poisson para picos de webhooks 05:30–21:00",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-030",
+      "paired_skill_id": "SKL-030",
+      "capability_name": "exec_lei_de_little_wip_sessoes",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Aplicação da Lei de Little (L = lambda * W) às 866 sessões ativas",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-031",
+      "paired_skill_id": "SKL-031",
+      "capability_name": "exec_bootstrap_nao_parametrico_receita",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Reamostragem determinística para bandas de incerteza de faturamento",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-032",
+      "paired_skill_id": "SKL-032",
+      "capability_name": "exec_correlacao_spearman_waba_stg",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Correlação de postos de Spearman entre volume WABA e guias STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-033",
+      "paired_skill_id": "SKL-033",
+      "capability_name": "exec_deteccao_anomalia_zscore_robusto",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Z-Score robusto baseado em MAD (Median Absolute Deviation) para quedas",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-034",
+      "paired_skill_id": "SKL-034",
+      "capability_name": "exec_curva_sobrevivencia_kaplan_meier_lead",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Curva de sobrevivência do lead entre primeiro contato e agendamento",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-035",
+      "paired_skill_id": "SKL-035",
+      "capability_name": "exec_otimizacao_programacao_linear_salas",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Alocação ótima de salas de Tomografia e Ultrassom sob restrição de agenda",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-036",
+      "paired_skill_id": "SKL-036",
+      "capability_name": "exec_indice_gini_carga_equipe",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Índice de Gini para auditar balanceamento justo de leads entre atendentes",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-037",
+      "paired_skill_id": "SKL-037",
+      "capability_name": "exec_suavizacao_exponencial_holt_winters",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Suavização Holt-Winters amortecida para projeção de curto prazo",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-038",
+      "paired_skill_id": "SKL-038",
+      "capability_name": "exec_distancia_mahalanobis_outliers",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Detecção multivariada de dias atípicos por feriado ou indisponibilidade",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-039",
+      "paired_skill_id": "SKL-039",
+      "capability_name": "exec_bayes_empirico_conversao_pino_geo",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Estimador Bayesiano empírico para conversão nos 80 pinos do Sertão Central",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-040",
+      "paired_skill_id": "SKL-040",
+      "capability_name": "exec_calculo_diferencial_taxa_instantanea",
+      "domain_code": "MATEMATICA_ESTATISTICA_FILAS",
+      "operational_action": "Executa de forma determinística e auditável: Derivada discreta de aceleração semanal de agendamentos no fim do mês",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-041",
+      "paired_skill_id": "SKL-041",
+      "capability_name": "exec_blake2b_csprng_ephemeral_join",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Join criptográfico volátil em RAM com chave BLAKE2b efêmera por execução",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-042",
+      "paired_skill_id": "SKL-042",
+      "capability_name": "exec_normalizacao_nono_digito_ceara_ddd88",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Normalização canônica de 8 dígitos tolerante ao 9º dígito no DDD 88/85",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-043",
+      "paired_skill_id": "SKL-043",
+      "capability_name": "exec_matching_nome_3tokens_anti_homonimo",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável:  pareamento estrito de nomes >= 3 tokens filtrando homônimos comuns",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-044",
+      "paired_skill_id": "SKL-044",
+      "capability_name": "exec_janela_temporal_bidirecional_30d",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Atribuição bidirecional [-30d, +30d] entre contato digital e data_exame",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-045",
+      "paired_skill_id": "SKL-045",
+      "capability_name": "exec_deduplicacao_paciente_multi_exame",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Consolidação de múltiplos procedimentos no mesmo dia em episódio clínico",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-046",
+      "paired_skill_id": "SKL-046",
+      "capability_name": "exec_classificador_pre_agendado_vs_retorno",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Separação exata entre pré-agendamento (-30..-1d), mesmo dia e retorno (+1..+30d)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-047",
+      "paired_skill_id": "SKL-047",
+      "capability_name": "exec_leitura_sqlite_uri_readonly_wal",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Acesso estrito ?mode=ro sem lock de escrita em bancos SQLite WAL ativos",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-048",
+      "paired_skill_id": "SKL-048",
+      "capability_name": "exec_fusao_5_fontes_omnichannel",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Unificação sem duplicidade de Smartbook, Cortex, Archive, Ultra50k e Meta CSV",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-049",
+      "paired_skill_id": "SKL-049",
+      "capability_name": "exec_cruzamento_sla_breach_vs_stg",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável:  Rastreamento de quantos leads sem resposta converteram ou perderam no STG",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-050",
+      "paired_skill_id": "SKL-050",
+      "capability_name": "exec_higienizacao_acentos_unicode_nfkd",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Padronização NFKD ASCII de nomes clínicos antes da hash em memória",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-051",
+      "paired_skill_id": "SKL-051",
+      "capability_name": "exec_filtro_ddd85_fortaleza_leak_audit",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Auditoria de leads fora da região alvo (DDD 85/11 vs DDD 88 Sertão Central)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-052",
+      "paired_skill_id": "SKL-052",
+      "capability_name": "exec_reconciliacao_data_ddmmyyyy_iso8601",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Parser resiliente multi-formato (DD/MM/YYYY, ISO-8601 e Unix Epoch UTC)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-053",
+      "paired_skill_id": "SKL-053",
+      "capability_name": "exec_particionamento_mensal_abr_out_2026",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Cubo analítico particionado mês a mês de Abril a Outubro de 2026",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-054",
+      "paired_skill_id": "SKL-054",
+      "capability_name": "exec_auditoria_cobertura_cache_parcial",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Detecção automática de corte temporal do cache (ex.: 20/10/2026)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-055",
+      "paired_skill_id": "SKL-055",
+      "capability_name": "exec_lineage_criptografico_sha256_json",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Assinatura SHA-256 de integridade de cada relatório agregado gerado",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-056",
+      "paired_skill_id": "SKL-056",
+      "capability_name": "exec_verificador_dlp_zero_pii_saida",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Varredura estática garantindo 0 CPFs, 0 telefones e 0 nomes nos artefatos",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-057",
+      "paired_skill_id": "SKL-057",
+      "capability_name": "exec_mapeamento_grupos_procedimentos_tuss",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Classificação padronizada de códigos TUSS STG em grupos executivos",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-058",
+      "paired_skill_id": "SKL-058",
+      "capability_name": "exec_detector_recontato_30_60_90d",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Análise de frequência de retorno de pacientes crônicos e check-ups",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-059",
+      "paired_skill_id": "SKL-059",
+      "capability_name": "exec_conciliador_sessoes_ocultas_archived",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Auditoria do impacto do botão Ocultar (ARCHIVED) na fila ativa",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-060",
+      "paired_skill_id": "SKL-060",
+      "capability_name": "exec_indexador_rag_8260_evidencias",
+      "domain_code": "CRUZAMENTO_DADOS_STG_NEUROCHAT",
+      "operational_action": "Executa de forma determinística e auditável: Publicação estruturada de metadados analíticos para busca híbrida FAISS+BM25",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-061",
+      "paired_skill_id": "SKL-061",
+      "capability_name": "exec_contrafactual_junho_sem_fisioaura",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Estimativa contrafactual de Junho/2026 sem desconexão do webhook FISIOAURA",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-062",
+      "paired_skill_id": "SKL-062",
+      "capability_name": "exec_contrafactual_agosto_sem_apagao_dc",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Reconstrução do volume de Agosto/2026 sem colapso de -93,6% na WABA 6827",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-063",
+      "paired_skill_id": "SKL-063",
+      "capability_name": "exec_pro_rata_conservador_outubro_31d",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Fechamento conservador de Outubro/2026 (20 dias observados + 11 dias piso)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-064",
+      "paired_skill_id": "SKL-064",
+      "capability_name": "exec_rumo_hoje_steady_state_31_10_2026",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Cálculo do patamar atual estabilizado de agendamentos em 31/10/2026",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-065",
+      "paired_skill_id": "SKL-065",
+      "capability_name": "exec_uplift_coexistence_oficial_v4",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Modelagem conservadora de +12% com WhatsApp Coexistence Oficial 3915+2270",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-066",
+      "paired_skill_id": "SKL-066",
+      "capability_name": "exec_recuperacao_18pct_fila_sem_resposta",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Taxa conservadora de resgate sobre pacientes afetados por SLA breach",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-067",
+      "paired_skill_id": "SKL-067",
+      "capability_name": "exec_projecao_nov_dez_2026_sazonal",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Projeção de fechamento do 4º trimestre respeitando feriados de fim de ano",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-068",
+      "paired_skill_id": "SKL-068",
+      "capability_name": "exec_banda_pessimista_base_otimista",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Três cenários parametrizados (Piso P33, Conservador Base, Teto Operacional)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-069",
+      "paired_skill_id": "SKL-069",
+      "capability_name": "exec_capacidade_maxima_tomografo_turno",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Teto físico de ocupação de Tomografia em janela diurna e plantão",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-070",
+      "paired_skill_id": "SKL-070",
+      "capability_name": "exec_simulacao_destravamento_spend_cap",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Impacto projetado em 7/15/30 dias após ajuste autorizado do spend_cap",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-071",
+      "paired_skill_id": "SKL-071",
+      "capability_name": "exec_modelo_amortecimento_pos_incidente",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Curva de recuperação de reputação algorítmica após queda de webhook",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-072",
+      "paired_skill_id": "SKL-072",
+      "capability_name": "exec_forecast_demanda_exames_imagem_usg",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Previsão dedicada para Ultrassonografia Obstétrica, Doppler e Abdome",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-073",
+      "paired_skill_id": "SKL-073",
+      "capability_name": "exec_forecast_demanda_laboratorio_16off",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Previsão de volume de análises clínicas com campanha 16% OFF",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-074",
+      "paired_skill_id": "SKL-074",
+      "capability_name": "exec_elasticidade_tempo_resposta_15ms",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Ganho de conversão por redução de TTFB de minutos para <15ms na borda",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-075",
+      "paired_skill_id": "SKL-075",
+      "capability_name": "exec_backtesting_erro_mape_abr_set",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Validação de erro percentual absoluto médio (MAPE) sobre meses fechados",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-076",
+      "paired_skill_id": "SKL-076",
+      "capability_name": "exec_meta_diaria_atendente_quixeramobim",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Desdobramento da projeção mensal em meta diária justa por atendente",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-077",
+      "paired_skill_id": "SKL-077",
+      "capability_name": "exec_alerta_precoce_desvio_meta_semanal",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Gatilho matemático se o ritmo dos primeiros 10 dias cair abaixo do P33",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-078",
+      "paired_skill_id": "SKL-078",
+      "capability_name": "exec_cenario_migracao_100pct_meta_oficial",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Comparativo de estabilidade entre Z-API legada e 100% Cloud API Oficial",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-079",
+      "paired_skill_id": "SKL-079",
+      "capability_name": "exec_impacto_retencao_midia_60d_ui",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Ganho de produtividade de atendimento com expurgo de banners/bots pesados",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-080",
+      "paired_skill_id": "SKL-080",
+      "capability_name": "exec_matriz_risco_dependencia_canal",
+      "domain_code": "PROJECOES_CONTRATUAIS_CENARIOS",
+      "operational_action": "Executa de forma determinística e auditável: Quantificação de resiliência com fallback automático WTS/FLW/Hunion",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-081",
+      "paired_skill_id": "SKL-081",
+      "capability_name": "exec_openpyxl_formulas_dinamicas_ptbr",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Geração nativa de planilhas .xlsx com fórmulas SUM, IFERROR e formatação BRL",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-082",
+      "paired_skill_id": "SKL-082",
+      "capability_name": "exec_abas_executivas_congelamento_paineis",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Layout corporativo com freeze_panes, larguras automáticas e cabeçalho escuro",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-083",
+      "paired_skill_id": "SKL-083",
+      "capability_name": "exec_painel_html5_svg_zero_cloudflare",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Dashboard responsivo autônomo hospedado em GitHub Pages (Fastly CDN)",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-084",
+      "paired_skill_id": "SKL-084",
+      "capability_name": "exec_preview_opengraph_whatsapp_diretoria",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Meta tags OpenGraph otimizadas para compartilhamento imediato no WhatsApp",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-085",
+      "paired_skill_id": "SKL-085",
+      "capability_name": "exec_modo_apresentacao_google_meet",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Layout widescreen de alto contraste para tela compartilhada no Google Meet",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-086",
+      "paired_skill_id": "SKL-086",
+      "capability_name": "exec_orquestrador_opencode_tokens_reais",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Despacho paralelo via CLI opencode v2.2.5 com auditoria JSON de tokens",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-087",
+      "paired_skill_id": "SKL-087",
+      "capability_name": "exec_auditoria_cruzada_4_modelos_opencode",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Consenso entre DeepSeek-v4.1, GLM-5.3, Big-Pickle e Flint-40B no OpenCode",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-088",
+      "paired_skill_id": "SKL-088",
+      "capability_name": "exec_ponte_sessao_agy_opencode_hub",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Utilitário CLI agy-opencode-hub para uso contínuo sob demanda na sessão",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-089",
+      "paired_skill_id": "SKL-089",
+      "capability_name": "exec_scanner_gitleaks_pre_commit_dlp",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Portão determinístico bloqueando segredos, .db ativos e PII antes do git push",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-090",
+      "paired_skill_id": "SKL-090",
+      "capability_name": "exec_espelhamento_drive_32tb_sem_sqlite",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Backup atômico em cortex_cerebral excluindo .db/.wal/.shm ativos",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-091",
+      "paired_skill_id": "SKL-091",
+      "capability_name": "exec_reconciliacao_journal_cooperativo",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Coordenação multi-sessão em journal.py respeitando locks de outros chats",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-092",
+      "paired_skill_id": "SKL-092",
+      "capability_name": "exec_absorcao_forense_transcript_3257_steps",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Extração e validação integral de artefatos e testes de sessões irmãs",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-093",
+      "paired_skill_id": "SKL-093",
+      "capability_name": "exec_certificacao_pytest_exit_zero",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Bateria automatizada de testes unitários e de contrato com Exit Code 0",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-094",
+      "paired_skill_id": "SKL-094",
+      "capability_name": "exec_assinatura_manifesto_sha256_recibo",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Geração de recibos criptográficos auditáveis em todas as entregas",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-095",
+      "paired_skill_id": "SKL-095",
+      "capability_name": "exec_verificador_headers_cdn_nao_cloudflare",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Prova HTTP confirmando Server: GitHub.com sem proxy Cloudflare",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-096",
+      "paired_skill_id": "SKL-096",
+      "capability_name": "exec_exportador_csv_tsv_limpo_bi",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Geração de tabelas planas sanitizadas compatíveis com Excel/Sheets/Tableau",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-097",
+      "paired_skill_id": "SKL-097",
+      "capability_name": "exec_sintese_executiva_linguagem_diretoria",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Tradução de telemetria complexa em decisões claras de negócio em Português",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-098",
+      "paired_skill_id": "SKL-098",
+      "capability_name": "exec_governanca_zero_mutacao_meta_ads",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Bloqueio estrito contra alterações não autorizadas na conta act_1349166316118823",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-099",
+      "paired_skill_id": "SKL-099",
+      "capability_name": "exec_politica_zero_idle_api_drain",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Encerramento imediato de workers após cada análise sem loops infinitos",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    },
+    {
+      "id": "HAB-100",
+      "paired_skill_id": "SKL-100",
+      "capability_name": "exec_catalogo_interativo_100x100_busca",
+      "domain_code": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA",
+      "operational_action": "Executa de forma determinística e auditável: Explorador instantâneo no painel web para filtrar as 100 skills e 100 habilidades",
+      "supported_runtimes": [
+        "antigravity",
+        "opencode-v2.2.5",
+        "codex-cli",
+        "ollama-local"
+      ]
+    }
+  ],
+  "sha256": "db7b525e60409e4d0f831c067217deffdb7b56dd4442c2d78cb6476bc3b2415e"
+}
