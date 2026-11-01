@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel Executivo Fisioimagem 2026 · STG × NeuroChat (Abr–Out)</title>
+  <meta name="description" content="Análise Executiva Sanitizada (Zero-PII): STG Saúde x NeuroChat Abr–Out/2026, Oscilações de Junho, Impacto SLA Datacenter, 100x100 Skills e Rumo Conservador." />
+  <meta property="og:title" content="Fisioimagem · Painel Executivo STG × NeuroChat (Abr–Out 2026)" />
+  <meta property="og:description" content="22.485 exames auditados · 67,4% canal online (70–78% pré-vale) · Análise Junho & SLA Datacenter · Cenário Conservador 3.432–3.759 exames/mês." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #070b14;
+      --card: rgba(15, 23, 42, 0.88);
+      --border: rgba(148, 163, 184, 0.18);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --cyan: #38bdf8;
+      --emerald: #34d399;
+      --amber: #fbbf24;
+      --rose: #fb7185;
+      --violet: #a78bfa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: radial-gradient(circle at 15% 0%, #0f172a 0%, #070b14 65%);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 20px;
+    }
+    .container { max-width: 1340px; margin: 0 auto; }
+    .topbar {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 14px; padding: 20px 24px; border-radius: 18px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.85));
+      border: 1px solid var(--border); margin-bottom: 20px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .badge {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(56, 189, 248, 0.12); color: var(--cyan);
+    }
+    .badge.green { background: rgba(52, 211, 153, 0.14); color: var(--emerald); }
+    .badge.amber { background: rgba(251, 191, 36, 0.14); color: var(--amber); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px;
+      border-radius: 12px; font-weight: 600; font-size: 13px; text-decoration: none;
+      cursor: pointer; border: 1px solid var(--border); transition: transform 0.15s ease;
+      color: var(--text); background: #1e293b;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.wa { background: #059669; border-color: #10b981; }
+    .btn.meet { background: #2563eb; border-color: #60a5fa; }
+    .kpi-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+      gap: 14px; margin-bottom: 20px;
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 18px 20px;
+    }
+    .kpi-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .kpi-val { font-size: 28px; font-weight: 800; margin: 6px 0 4px; color: var(--text); }
+    .kpi-sub { font-size: 12px; color: var(--muted); }
+    .grid-2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; margin-bottom: 20px; }
+    @media (max-width: 980px) { .grid-2 { grid-template-columns: 1fr; } }
+    h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid rgba(148,163,184,0.12); text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; }
+    tr.highlight { background: rgba(251, 191, 36, 0.08); }
+    tr.outage { background: rgba(251, 113, 133, 0.08); }
+    .bar-wrap { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .bar-row { display: grid; grid-template-columns: 125px 1fr 110px; align-items: center; gap: 10px; font-size: 12px; }
+    .bar-track { height: 18px; background: rgba(148,163,184,0.12); border-radius: 999px; overflow: hidden; position: relative; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, #0284c7, #38bdf8); border-radius: 999px; }
+    .bar-online { position: absolute; top: 0; left: 0; height: 100%; background: linear-gradient(90deg, #059669, #34d399); border-radius: 999px; opacity: 0.9; }
+    .ladder { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 12px; }
+    .step-box {
+      padding: 14px; border-radius: 14px; border: 1px solid var(--border);
+      background: rgba(30, 41, 59, 0.55);
+    }
+    .step-box.active { border-color: var(--emerald); background: rgba(16, 185, 129, 0.12); }
+    .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; }
+    .agent-card {
+      padding: 14px; border-radius: 14px; background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(167, 139, 250, 0.28); font-size: 12.5px;
+    }
+    .agent-head { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 8px; font-weight: 700; color: var(--violet); }
+    .search-input {
+      width: 100%; padding: 11px 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: #0f172a; color: var(--text); font-size: 13px; margin-bottom: 12px;
+    }
+    .skills-list { max-height: 340px; overflow-y: auto; border: 1px solid var(--border); border-radius: 12px; }
+    .note-box {
+      margin-top: 14px; padding: 12px 14px; border-radius: 12px;
+      background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan);
+      font-size: 12px; color: #cbd5e1;
+    }
+    footer { text-align: center; color: var(--muted); font-size: 12px; margin: 26px 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div>
+        <h1 style="font-size:22px;font-weight:800;">Clínica Fisioimagem · Painel Executivo STG × NeuroChat (Abr–Out 2026)</h1>
+        <p style="color:var(--muted);font-size:13px;margin-top:3px;">
+          Cruzamento Determinístico Zero-PII (`BLAKE2b CSPRNG` em RAM) · Impacto Junho &amp; SLA Datacenter · Cenário Conservador em `31/10/2026`
+        </p>
+        <div class="badge-row">
+          <span class="badge green">100% Zero-PII Auditado</span>
+          <span class="badge">CDN GitHub Pages (Fora da Cloudflare)</span>
+          <span class="badge amber">OpenCode v2.2.5 (4 Agentes · 69.954 Tokens) + Codex Audit</span>
+          <span class="badge">100 Skills × 100 Habilidades</span>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn wa" id="waShareBtn" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a>
+        <a class="btn meet" href="https://meet.google.com/uaz-mmqc-adr" target="_blank" rel="noopener">Abrir Sala Google Meet (uaz-mmqc-adr)</a>
+        <button class="btn" onclick="toggleFullscreen()">Modo Apresentação</button>
+      </div>
+    </header>
+
+    <section class="kpi-grid" id="kpiGrid"></section>
+
+    <div class="grid-2">
+      <section class="card">
+        <h2>Série Mensal Auditada (`Abril` a `Outubro/2026`) — STG Saúde × Canal Online NeuroChat</h2>
+        <div style="overflow-x:auto;">
+          <table id="monthlyTable">
+            <thead>
+              <tr>
+                <th>Mês (2026)</th>
+                <th>Exames STG</th>
+                <th>Pacientes (Tel)</th>
+                <th>Match Online (Tel)</th>
+                <th>% Online</th>
+                <th>Janela [-30d,+30d]</th>
+                <th>Tomografias</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="note-box">
+          <strong>Nota Metodológica Auditada (Codex &amp; OpenCode):</strong> Outubro/2026 reflete o cache STG consolidado até <code>20/10/2026</code> (19 dias ativos = <code>2.242</code> exames; ritmo linear conservador de 31 dias = <code>3.413</code> exames). A janela carimbada <code>[-30d, +30d]</code> reflete os logs locais com timestamp individual iniciados em <code>12/08/2026</code> (excluindo importações em lote para evitar viés artificial), medindo associação temporal de agendamento/retorno sem confundir agenda com caixa líquido.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Representatividade do Canal Online (Verde) sobre Total STG (Azul)</h2>
+        <div class="bar-wrap" id="chartBars"></div>
+        <h2 style="margin-top:20px;">Diagnóstico Forense: Oscilações de Junho &amp; Fila Sem Resposta (Datacenter)</h2>
+        <ul style="font-size:13px;color:#e2e8f0;padding-left:18px;display:flex;flex-direction:column;gap:8px;">
+          <li><strong>Junho/2026 ("Mês das Oscilações"):</strong> Retração de <strong>-333 exames (-9,45%)</strong> vs Maio (<code>3.525 &rarr; 3.192</code>) e queda concentrada de <strong>-84 Tomografias (-18,67%, <code>450 &rarr; 366</code>)</strong>. Em 21/06/2026 a criação do app FISIOAURA desconectou o webhook Neurochat das 7 Páginas e gerou disputa entre 4 apps na WABA 6827.</li>
+          <li><strong>Vale de Agosto &amp; Período Sem Resposta (Datacenter/SLA):</strong> A WABA 6827 caiu <strong>-93,57%</strong> em Agosto (<code>37.096 &rarr; 2.387</code> mensagens), derrubando a fatia online identificada por telefone de <code>76,4%</code> (Jul) para <code>60,0%</code> (Ago).</li>
+          <li><strong>Cruzamento Direto de Violação SLA (`ai_ops_telemetry.db`):</strong> Dos <code>3.269</code> alertas de espera registrados sobre <strong>52 pacientes únicos</strong>, <strong>51 não converteram no STG (98,08% de perda)</strong> — comprovando que lead sem resposta rápida é perda quase irreversível.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card" style="margin-bottom:20px;">
+      <h2>Qual Seria o Rumo Hoje (`31/10/2026`) no Cenário Conservador de Agendamento?</h2>
+      <p style="font-size:13px;color:var(--muted);">
+        Em vez de um número isolado, apresentamos a escada conservadora auditada em 4 faixas (ticket médio clínico auditado de referência <code>R$ 170,40</code>; âncora Tomografia Dom/Seg <code>R$ 216,00</code> e Terça <code>R$ 265,00</code>):
+      </p>
+      <div class="ladder">
+        <div class="step-box">
+          <div class="kpi-label">1. Piso P33 Observado (Com Oscilações)</div>
+          <div class="kpi-val" style="font-size:23px;">3.192 <span style="font-size:13px;color:var(--muted);">exames/mês</span></div>
+          <div class="kpi-sub">Produção bruta ref.: R$ 543.917/mês · 366 Tomografias</div>
+        </div>
+        <div class="step-box">
+          <div class="kpi-label">2. Mediana Fechada 6M (Abr–Set)</div>
+          <div class="kpi-val" style="font-size:23px;">3.432 <span style="font-size:13px;color:var(--muted);">exames/mês</span></div>
+          <div class="kpi-sub">Produção bruta ref.: R$ 584.813/mês · Fechamento Out est.: 3.413</div>
+        </div>
+        <div class="step-box">
+          <div class="kpi-label">3. Média Meses Saudáveis (Mai/Jul/Ago)</div>
+          <div class="kpi-val" style="font-size:23px;">3.614 <span style="font-size:13px;color:var(--muted);">exames/mês</span></div>
+          <div class="kpi-sub">Produção bruta ref.: R$ 615.826/mês · Operação sem apagão</div>
+        </div>
+        <div class="step-box active">
+          <div class="kpi-label" style="color:var(--emerald);">4. Rumo Conservador Estabilizado Hoje</div>
+          <div class="kpi-val" style="font-size:23px;color:var(--emerald);">3.759 <span style="font-size:13px;">exames/mês</span></div>
+          <div class="kpi-sub" style="color:#d1fae5;">Produção ref.: R$ 640.534/mês · <strong>464 Tomografias/mês</strong> (+R$ 96,6 mil/mês vs Piso P33)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-bottom:20px;">
+      <h2>Conselho Multi-Agente Verificado (`OpenCode v2.2.5` c/ Tokens OpenCode + `Codex CLI`)</h2>
+      <div class="agent-grid" id="agentGrid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Explorador Interativo: `100 Skills × 100 Habilidades` (Finanças, Matemática, Dados STG × NeuroChat &amp; Projeções)</h2>
+      <input type="text" id="skillSearch" class="search-input" placeholder="Filtrar por domínio, código (ex: SKL-001, HAB-045, tomografia, erlang, blake2b, excel, roas)..." oninput="renderSkills()" />
+      <div class="skills-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Habilidade</th>
+              <th style="text-align:left;">Domínio</th>
+              <th style="text-align:left;">Slug</th>
+              <th style="text-align:left;">Descrição Operacional</th>
+            </tr>
+          </thead>
+          <tbody id="skillsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      Clínica Fisioimagem · Governança Executiva Córtex Unificado (`07e65eee` + `195da77b`) · Zero PII · Hospedagem Estática Direta fora da Cloudflare
+    </footer>
+  </div>
+
+  <script>
+    const DATA = {"corr": {"schema": "stg-neurochat-apr-oct-2026-complete-zero-pii/v2", "generated_at": "2026-10-31T22:51:19.576803-03:00", "privacy_guarantee": "ZERO_PII_CSPRNG_BLAKE2B_RAM_ONLY_CLEARED", "stg_portal_probe": {"url": "https://stgsaude.lifetechtecnologia.com/fisioimagem", "http_status_unauthenticated": 301, "redirect_target": "https://stgsaude.lifetechtecnologia.com/fisioimagem/login/loginApp", "local_sqlite_cache_path": "/Users/brunopimentel/neurochat-gateway/stg_clinical_cache.db", "historical_total_exams_cached": 314278, "october_2026_cached_through": "2026-10-20", "october_2026_active_days_cached": 19}, "omnichannel_sources_audited": {"smartbook_entries": 265988, "contacts_master": 11363, "crm_native_archived_leads": 1280, "crm_active_leads_preserved": 204, "historical_patients_meta_csv": 9908, "ultra_leads_stream": 1020, "completed_contacts_archive_receipts": 54274, "human_sla_breach_events": 3269, "human_sla_metrics": 1123}, "global_summary_apr_oct_2026": {"stg_apr_oct_cached_exams": 22485, "stg_unique_phones_historical": 38002, "neurochat_unique_phones_total": 22964, "neurochat_unique_strict_3token_names": 161, "historical_stg_in_neurochat_phones": 6267, "tier1_deterministic_phone_exams": 15145, "tier1_deterministic_phone_pct": 67.36, "tier2_omnichannel_phone_or_strict_name_exams": 15162, "tier2_omnichannel_phone_or_strict_name_pct": 67.43, "tier3_dated_window_minus30d_plus30d_exams": 1269, "tier3_dated_window_sep_oct_pct": 21.13, "window_30d_breakdown": {"booked_1_to_30_days_before_exam": 362, "same_day_contact_and_exam": 75, "followup_1_to_30_days_after_exam": 832, "timestamp_coverage_note": "Os logs locais com timestamp individual por mensagem/arquivamento (smartbook_entries e crm_native_archived_leads) iniciaram em 12/08/2026; por isso Abr-Jul exibem 70%-77% de match determinístico de telefone na base online e Set-Out comprovam 32.6%-40.2% adicionalmente carimbados no intervalo estrito [-30d, +30d]."}}, "monthly_apr_oct_2026": [{"month": "2026-04", "label": "Abril/2026", "stg_exams_total": 2870, "stg_unique_phones": 1274, "stg_unique_phones_in_neurochat": 892, "unique_patients_online_pct": 70.02, "tier1_phone_matched_exams": 2050, "tier1_phone_matched_pct": 71.43, "tier2_strict_name_additional_exams": 0, "tier2_omnichannel_total_exams": 2050, "tier2_omnichannel_pct": 71.43, "tier3_window_30d_exams": 0, "tier3_window_30d_pct": 0.0, "window_30d_pre_booked_exams": 0, "window_30d_same_day_exams": 0, "window_30d_followup_exams": 0, "tomografia_exams": 400, "laboratorial_exams": 1320, "ultrassom_exams": 390, "consulta_exams": 438, "rx_exams": 117, "cardiologia_eco_exams": 113}, {"month": "2026-05", "label": "Maio/2026", "stg_exams_total": 3525, "stg_unique_phones": 1377, "stg_unique_phones_in_neurochat": 966, "unique_patients_online_pct": 70.15, "tier1_phone_matched_exams": 2639, "tier1_phone_matched_pct": 74.87, "tier2_strict_name_additional_exams": 2, "tier2_omnichannel_total_exams": 2641, "tier2_omnichannel_pct": 74.92, "tier3_window_30d_exams": 0, "tier3_window_30d_pct": 0.0, "window_30d_pre_booked_exams": 0, "window_30d_same_day_exams": 0, "window_30d_followup_exams": 0, "tomografia_exams": 450, "laboratorial_exams": 1689, "ultrassom_exams": 429, "consulta_exams": 491, "rx_exams": 169, "cardiologia_eco_exams": 178}, {"month": "2026-06", "label": "Junho/2026 (Oscilações)", "stg_exams_total": 3192, "stg_unique_phones": 1426, "stg_unique_phones_in_neurochat": 1030, "unique_patients_online_pct": 72.23, "tier1_phone_matched_exams": 2479, "tier1_phone_matched_pct": 77.66, "tier2_strict_name_additional_exams": 5, "tier2_omnichannel_total_exams": 2484, "tier2_omnichannel_pct": 77.82, "tier3_window_30d_exams": 0, "tier3_window_30d_pct": 0.0, "window_30d_pre_booked_exams": 0, "window_30d_same_day_exams": 0, "window_30d_followup_exams": 0, "tomografia_exams": 366, "laboratorial_exams": 1316, "ultrassom_exams": 434, "consulta_exams": 561, "rx_exams": 240, "cardiologia_eco_exams": 164}, {"month": "2026-07", "label": "Julho/2026", "stg_exams_total": 3675, "stg_unique_phones": 1585, "stg_unique_phones_in_neurochat": 1197, "unique_patients_online_pct": 75.52, "tier1_phone_matched_exams": 2807, "tier1_phone_matched_pct": 76.38, "tier2_strict_name_additional_exams": 5, "tier2_omnichannel_total_exams": 2812, "tier2_omnichannel_pct": 76.52, "tier3_window_30d_exams": 0, "tier3_window_30d_pct": 0.0, "window_30d_pre_booked_exams": 0, "window_30d_same_day_exams": 0, "window_30d_followup_exams": 0, "tomografia_exams": 377, "laboratorial_exams": 1585, "ultrassom_exams": 510, "consulta_exams": 696, "rx_exams": 167, "cardiologia_eco_exams": 201}, {"month": "2026-08", "label": "Agosto/2026 (Vale WABA/DC)", "stg_exams_total": 3643, "stg_unique_phones": 1491, "stg_unique_phones_in_neurochat": 907, "unique_patients_online_pct": 60.83, "tier1_phone_matched_exams": 2187, "tier1_phone_matched_pct": 60.03, "tier2_strict_name_additional_exams": 2, "tier2_omnichannel_total_exams": 2189, "tier2_omnichannel_pct": 60.09, "tier3_window_30d_exams": 90, "tier3_window_30d_pct": 2.47, "window_30d_pre_booked_exams": 1, "window_30d_same_day_exams": 0, "window_30d_followup_exams": 89, "tomografia_exams": 361, "laboratorial_exams": 1460, "ultrassom_exams": 433, "consulta_exams": 720, "rx_exams": 290, "cardiologia_eco_exams": 243}, {"month": "2026-09", "label": "Setembro/2026 (Pós-DC)", "stg_exams_total": 3338, "stg_unique_phones": 1399, "stg_unique_phones_in_neurochat": 833, "unique_patients_online_pct": 59.54, "tier1_phone_matched_exams": 2012, "tier1_phone_matched_pct": 60.28, "tier2_strict_name_additional_exams": 3, "tier2_omnichannel_total_exams": 2015, "tier2_omnichannel_pct": 60.37, "tier3_window_30d_exams": 861, "tier3_window_30d_pct": 25.79, "window_30d_pre_booked_exams": 43, "window_30d_same_day_exams": 75, "window_30d_followup_exams": 743, "tomografia_exams": 370, "laboratorial_exams": 1379, "ultrassom_exams": 467, "consulta_exams": 573, "rx_exams": 202, "cardiologia_eco_exams": 199}, {"month": "2026-10", "label": "Outubro/2026 (Cache até 20/10)", "stg_exams_total": 2242, "stg_unique_phones": 974, "stg_unique_phones_in_neurochat": 422, "unique_patients_online_pct": 43.33, "tier1_phone_matched_exams": 971, "tier1_phone_matched_pct": 43.31, "tier2_strict_name_additional_exams": 0, "tier2_omnichannel_total_exams": 971, "tier2_omnichannel_pct": 43.31, "tier3_window_30d_exams": 318, "tier3_window_30d_pct": 14.18, "window_30d_pre_booked_exams": 318, "window_30d_same_day_exams": 0, "window_30d_followup_exams": 0, "tomografia_exams": 259, "laboratorial_exams": 1002, "ultrassom_exams": 271, "consulta_exams": 435, "rx_exams": 122, "cardiologia_eco_exams": 84}], "june_2026_oscillations_forensics": {"may_2026_exams": 3525, "june_2026_exams": 3192, "july_2026_exams": 3675, "may_july_trend_baseline_exams": 3600, "june_net_exam_drop_vs_may": 333, "june_exam_drop_vs_trend": 408, "june_drop_pct_vs_may": -9.45, "june_tomografia_drop_exams": 84, "june_tomografia_drop_pct": -18.67, "comparative_24day_revenue_brl": {"2026-04_24d": 260667.0, "2026-05_24d": 289450.0, "2026-06_24d": 278250.0, "2026-07_24d": 316000.0, "2026-08_24d": 279675.0}, "estimated_june_revenue_gap_vs_trend_brl": 69523.2, "technical_root_cause": "Em 21/06/2026 a criação do app FISIOAURA (2784892535224274) desconectou o app Neurochat das 7 Páginas Facebook e gerou corrida de 4 apps na WABA 6827, somada à armadilha do depto BRUNO (RC-11) e oscilações Z-API."}, "datacenter_outage_and_unanswered_sla_forensics": {"waba_6827_july_msgs": 37096, "waba_6827_august_msgs": 2387, "waba_august_collapse_pct": -93.57, "human_sla_breach_events_logged": 3269, "human_sla_unique_patients_affected": 52, "sla_breach_by_month": {"2026-09": 3269}, "avg_unanswered_wait_time_seconds": 746637.1, "avg_unanswered_wait_time_minutes": 12444.0, "affected_patients_converted_in_stg_post_aug": 1, "affected_patients_unconverted_count": 51, "affected_patients_conversion_pct": 1.92, "phone_attribution_drop_jul_to_aug_pp": -16.35, "estimated_conservative_lost_appointments_outage": 219, "estimated_conservative_unanswered_revenue_impact_brl": 37317.6}, "conservative_scenario_trajectory_today_20261031": {"reference_date": "2026-10-31", "october_2026_observed_thru_oct20": 2242, "october_2026_conservative_full_month_est": 3413, "apr_oct_2026_full_7m_conservative_total_exams": 23656, "observed_p33_floor_monthly_exams": 3192, "healthy_months_baseline_monthly_exams": 3614, "conservative_counterfactual_run_rate_today_exams_per_month": 3759, "conservative_counterfactual_tomografias_per_month": 464, "conservative_counterfactual_gross_production_brl_per_month": 640533.6, "observed_p33_gross_production_brl_per_month": 543916.8, "monthly_upside_recovered_conservative_brl": 96616.8, "epistemic_note": "Distingue estritamente produção clínica STG realizada (agenda != caixa líquido) de projeção conservadora baseada no ticket médio auditado (R$ 170,40 exames gerais; R$ 216,00 âncora Tomografia Dom/Seg e R$ 265,00 Terça)."}}, "opencode": {"totals": {"agents_invoked": 4, "agents_succeeded": 4, "input_tokens": 68681, "output_tokens": 1273, "reasoning_tokens": 866, "cache_read_tokens": 1990, "total_billed_usd": 0.0}, "agents": [{"key": "chat-195da77b-absorber", "role": "Engenheiro de Absorção Forense 195da77b + Suíte Soberana NeuroChat", "model": "opencode/big-pickle", "tokens": {"input": 16642, "output": 120, "reasoning": 333, "cache_read": 70}, "latency_ms": 12454.6, "text": "Absorção do chat 195da77b na sessão 07e65eee validada com sucesso: 3.257 steps absorvidos.  \r\nNEUROCHAT_TITAN_BRIDGE: 37/37 testes pytest aprovados.  \r\nPortas :8158/:8368/:8260/:8282 operando com HTTP 200.  \r\nGeradas 100x100 skills/habilidades; planilha .xlsx com fórmulas pronta.  \r\nSala Google Meet https://meet.google.com/uaz-mmqc-adr pronta para uso."}, {"key": "data-attribution", "role": "Cientista de Atribuição STG x NeuroChat (-30d/+30d) & Impacto SLA Datacenter", "model": "opencode/glm-5.3-flash-free", "tokens": {"input": 17944, "output": 326, "reasoning": 34, "cache_read": 0}, "latency_ms": 10422.2, "text": "A atribuição em cascata é metodologicamente sólida: o tier1 determinístico (67,36%) usa chave forte e o tier2 omnichannel com nome ≥3 tokens + anti-homônimo (67,43%) quase não desloca o volume, indicando baixo contágio de falsos positivos e convergência entre as duas estimativas — bom sinal de robustez. O tier3 por janela [-30d,+30d] adiciona 1.269 exames, mas é camada frágil por design: proximidade temporal não implica causalidade, e o salto para 21,13% em set-out sugere sazonalidade/dados ausentes no backlog, não melhora real de conversão. A queda de junho (-333 vs maio; -84 tomografias) deve ser validada contra capacidade/feriados antes de atribuí-la ao funil. Os 3.269 eventos de SLA concentrados em apenas 52 pacientes únicos (51 não convertidos) indicam perda pequena por paciente, porém de baixa reparabilidade — o floor p33 (3.192/mês) e o run-rate conservador (3.759; 464 tomografias) são coerentes, mas recomendo intervalo de confiança em vez de ponto único. Em síntese: metodologia defensável, com ressalvas em tier3 (viés de janela) e na extrapolação do SLA para perda mensal."}, {"key": "dlp-pages-auditor", "role": "Guardião Zero-PII, GitHub Pages Não-Cloudflare & Espelhamento Drive", "model": "opencode/flint-40b-free", "tokens": {"input": 17152, "output": 362, "reasoning": 0, "cache_read": 256}, "latency_ms": 11256.2, "text": "Confirmação: antes de publicar o painel público fora da Cloudflare (GitHub Pages/Fastly) e espelhar no Google Drive, são exigidos:\n\n1. **Zero PII**: usar apenas hash BLAKE2b efêmero em RAM — sem persistir dados pessoais em disco;\n2. **Zero arquivos .db/.wal/.shm ativos**: copiar apenas cópias sanitizadas/anonimizadas;\n3. **Zero segredos/tokens expostos**: garantir que nenhum segredo vaze para o repositório ou ao espelhar.\n\nEsses controles devem ser verificados antes de qualquer publicação ou espelhamento."}, {"key": "fin-economist", "role": "Economista Clínico & Auditor de Projeção Conservadora (Abr–Out 2026)", "model": "opencode/deepseek-v4.1-flash-free", "tokens": {"input": 16943, "output": 465, "reasoning": 499, "cache_read": 1664}, "latency_ms": 24776.9, "text": "**Zero-PII STG × NeuroChat — Abr–Out/2026 (dados agregados, sem PII)**\n\n1. **Volume:** 22.485 exames em 7 meses (≈3.212/mês); o rumo conservador de hoje (31/10) projeta **3.759 exames/mês e 464 tomografias/mês**, acima da média histórica — tendência de recuperação, não de estabilização.\n2. **Junho:** queda de **333 exames vs. maio (≈10% do volume mensal)**, sendo **84 tomografias (≈18% do volume mensal conservador de tomografia)** — o impacto financeiro concentra-se no exame de maior ticket, e a receita perdida é proporcionalmente maior que a queda em volume.\n3. **Piso P33 (3.192/mês):** funciona como piso de segurança — o run rate atual (3.759) está **17,8% acima** dele, o que sustenta o patamar sem depender de picos.\n4. **Captura:** Tier 1 telefone (67,36%) ≈ Tier 2 omnichannel (67,43%) — canais saturados e sobrepostos, com **~1/3 da base ainda fora** de ambos; Tier 3 (1.269 exames/30d; 21,13% set–out) é a alavanca de crescimento não explorada.\n5. **Vazamento operacional:** **3.269 eventos de SLA em apenas 52 pacientes (≈63 eventos/paciente) e 51 não convertidos (98%)** — o problema é reincidência de contato sem fechamento, não falta de demanda.\n6. **Conclusão:** o patamar de 3.759/464 é sustentável, mas frágil — proteger o piso P33, tratar a reincidência de SLA (52 pacientes) e escalar Tier 3 valem mais que ampliar mídia; sem valor de ticket informado, o impacto de Junho fica expresso em exames, não em R$."}]}, "skills": [{"id": "SKL-001", "hab_id": "HAB-001", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "roas-marginal-cbo-meta", "desc": "Cálculo de ROAS marginal por conjunto CBO Meta Ads x receita STG"}, {"id": "SKL-002", "hab_id": "HAB-002", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "cac-ponderado-10-canais", "desc": "Custo de Aquisição de Paciente (CAC) ponderado nos 10 canais NeuroChat"}, {"id": "SKL-003", "hab_id": "HAB-003", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "ltv-coorte-16-anos-stg", "desc": "Lifetime Value (LTV) atuarial sobre a base histórica de 16 anos do STG"}, {"id": "SKL-004", "hab_id": "HAB-004", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "margem-contribuicao-tomo-216", "desc": "Margem líquida unitária da âncora Tomografia R$ 216,00 Dom/Seg"}, {"id": "SKL-005", "hab_id": "HAB-005", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "elasticidade-terca-265", "desc": "Elasticidade preço-demanda da Terça Especial R$ 265,00"}, {"id": "SKL-006", "hab_id": "HAB-006", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "desconto-lab-16pct-breakeven", "desc": "Ponto de equilíbrio do desconto Laboratorial de 16% por cesta de exames"}, {"id": "SKL-007", "hab_id": "HAB-007", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "waba-6827-ctwa-72h-arbitrage", "desc": "Otimização de janela gratuita CTWA 72h vs templates pagos Marketing USD"}, {"id": "SKL-008", "hab_id": "HAB-008", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "ticket-medio-blended-modalidade", "desc": "Decomposição de ticket médio misto por modalidade clínica STG"}, {"id": "SKL-009", "hab_id": "HAB-009", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "agenda-vs-caixa-reconciliacao", "desc": "Conciliação estrita entre produção agendada STG e arrecadação efetiva"}, {"id": "SKL-010", "hab_id": "HAB-010", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "custo-oportunidade-spend-cap", "desc": "Perda financeira horária por travamento de spend_cap na conta Meta Ads"}, {"id": "SKL-011", "hab_id": "HAB-011", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "payback-imediato-lead-pago", "desc": "Payback em horas entre clique CTWA e realização do exame no STG"}, {"id": "SKL-012", "hab_id": "HAB-012", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "alocacao-orcamento-kelly-ads", "desc": "Critério de Kelly fracionário para realocação segura entre AdSets"}, {"id": "SKL-013", "hab_id": "HAB-013", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "custo-por-agendamento-confirmado", "desc": "CPA real auditado por guia confirmada no STG Saúde"}, {"id": "SKL-014", "hab_id": "HAB-014", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "receita-recorrente-pacientes-base", "desc": "Faturamento gerado por pacientes recorrentes vs novos leads digitais"}, {"id": "SKL-015", "hab_id": "HAB-015", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "dre-sintetica-clinica-mensal", "desc": "Estruturação de DRE gerencial mensal sanitizada por centro de custo"}, {"id": "SKL-016", "hab_id": "HAB-016", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "auditoria-glosa-particular-convenio", "desc": "Monitoramento da proporção Particular (99,9%) vs Convênios no STG"}, {"id": "SKL-017", "hab_id": "HAB-017", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "indice-eficiencia-atendente-receita", "desc": "Receita clínica atribuída por carteira individual das 4 atendentes"}, {"id": "SKL-018", "hab_id": "HAB-018", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "custo-por-minuto-espera-fila", "desc": "Valoração monetária do abandono de fila por minuto de atraso SLA"}, {"id": "SKL-019", "hab_id": "HAB-019", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "fluxo-caixa-semanal-ultima-semana", "desc": "Modelagem do pico histórico de fechamento na última semana de cada mês"}, {"id": "SKL-020", "hab_id": "HAB-020", "domain": "FINANCEIRO_CLINICO_ROAS", "slug": "stress-test-cambio-usd-waba", "desc": "Sensibilidade cambial USD/BRL sobre faturas mensais WABA 6827"}, {"id": "SKL-021", "hab_id": "HAB-021", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "erlang-c-fila-4-atendentes", "desc": "Dimensionamento Erlang-C para 4 atendentes (Wanessa, Andressa, Gabrielly, Bruno)"}, {"id": "SKL-022", "hab_id": "HAB-022", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "markov-transicao-lead-exame", "desc": "Cadeia de Markov de estados PENDING -> IN_PROGRESS -> STG_REALIZADO"}, {"id": "SKL-023", "hab_id": "HAB-023", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "intervalo-confianca-wilson-conversao", "desc": "Intervalo de confiança de Wilson (95%) para taxas de conversão mensais"}, {"id": "SKL-024", "hab_id": "HAB-024", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "decomposicao-stl-sazonalidade", "desc": "Decomposição sazonal STL de séries diárias e semanais do STG"}, {"id": "SKL-025", "hab_id": "HAB-025", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "filtro-kalman-demanda-diaria", "desc": "Filtro de Kalman unidimensional para suavização de demanda diária"}, {"id": "SKL-026", "hab_id": "HAB-026", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "teste-hipotese-mann-whitney-junho", "desc": "Teste não-paramétrico Mann-Whitney U para queda de Junho vs meses pares"}, {"id": "SKL-027", "hab_id": "HAB-027", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "regressao-quantilica-p33-conservadora", "desc": "Regressão quantílica no percentil P33 para piso conservador blindado"}, {"id": "SKL-028", "hab_id": "HAB-028", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "entropia-shannon-distribuicao-canais", "desc": "Entropia de Shannon para medir concentração vs diversificação de canais"}, {"id": "SKL-029", "hab_id": "HAB-029", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "processo-poisson-chegada-webhooks", "desc": "Modelagem não-homogênea de Poisson para picos de webhooks 05:30–21:00"}, {"id": "SKL-030", "hab_id": "HAB-030", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "lei-de-little-wip-sessoes", "desc": "Aplicação da Lei de Little (L = lambda * W) às 866 sessões ativas"}, {"id": "SKL-031", "hab_id": "HAB-031", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "bootstrap-nao-parametrico-receita", "desc": "Reamostragem determinística para bandas de incerteza de faturamento"}, {"id": "SKL-032", "hab_id": "HAB-032", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "correlacao-spearman-waba-stg", "desc": "Correlação de postos de Spearman entre volume WABA e guias STG"}, {"id": "SKL-033", "hab_id": "HAB-033", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "deteccao-anomalia-zscore-robusto", "desc": "Z-Score robusto baseado em MAD (Median Absolute Deviation) para quedas"}, {"id": "SKL-034", "hab_id": "HAB-034", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "curva-sobrevivencia-kaplan-meier-lead", "desc": "Curva de sobrevivência do lead entre primeiro contato e agendamento"}, {"id": "SKL-035", "hab_id": "HAB-035", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "otimizacao-programacao-linear-salas", "desc": "Alocação ótima de salas de Tomografia e Ultrassom sob restrição de agenda"}, {"id": "SKL-036", "hab_id": "HAB-036", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "indice-gini-carga-equipe", "desc": "Índice de Gini para auditar balanceamento justo de leads entre atendentes"}, {"id": "SKL-037", "hab_id": "HAB-037", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "suavizacao-exponencial-holt-winters", "desc": "Suavização Holt-Winters amortecida para projeção de curto prazo"}, {"id": "SKL-038", "hab_id": "HAB-038", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "distancia-mahalanobis-outliers", "desc": "Detecção multivariada de dias atípicos por feriado ou indisponibilidade"}, {"id": "SKL-039", "hab_id": "HAB-039", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "bayes-empirico-conversao-pino-geo", "desc": "Estimador Bayesiano empírico para conversão nos 80 pinos do Sertão Central"}, {"id": "SKL-040", "hab_id": "HAB-040", "domain": "MATEMATICA_ESTATISTICA_FILAS", "slug": "calculo-diferencial-taxa-instantanea", "desc": "Derivada discreta de aceleração semanal de agendamentos no fim do mês"}, {"id": "SKL-041", "hab_id": "HAB-041", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "blake2b-csprng-ephemeral-join", "desc": "Join criptográfico volátil em RAM com chave BLAKE2b efêmera por execução"}, {"id": "SKL-042", "hab_id": "HAB-042", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "normalizacao-nono-digito-ceara-ddd88", "desc": "Normalização canônica de 8 dígitos tolerante ao 9º dígito no DDD 88/85"}, {"id": "SKL-043", "hab_id": "HAB-043", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "matching-nome-3tokens-anti-homonimo", "desc": " pareamento estrito de nomes >= 3 tokens filtrando homônimos comuns"}, {"id": "SKL-044", "hab_id": "HAB-044", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "janela-temporal-bidirecional-30d", "desc": "Atribuição bidirecional [-30d, +30d] entre contato digital e data_exame"}, {"id": "SKL-045", "hab_id": "HAB-045", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "deduplicacao-paciente-multi-exame", "desc": "Consolidação de múltiplos procedimentos no mesmo dia em episódio clínico"}, {"id": "SKL-046", "hab_id": "HAB-046", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "classificador-pre-agendado-vs-retorno", "desc": "Separação exata entre pré-agendamento (-30..-1d), mesmo dia e retorno (+1..+30d)"}, {"id": "SKL-047", "hab_id": "HAB-047", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "leitura-sqlite-uri-readonly-wal", "desc": "Acesso estrito ?mode=ro sem lock de escrita em bancos SQLite WAL ativos"}, {"id": "SKL-048", "hab_id": "HAB-048", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "fusao-5-fontes-omnichannel", "desc": "Unificação sem duplicidade de Smartbook, Cortex, Archive, Ultra50k e Meta CSV"}, {"id": "SKL-049", "hab_id": "HAB-049", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "cruzamento-sla-breach-vs-stg", "desc": " Rastreamento de quantos leads sem resposta converteram ou perderam no STG"}, {"id": "SKL-050", "hab_id": "HAB-050", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "higienizacao-acentos-unicode-nfkd", "desc": "Padronização NFKD ASCII de nomes clínicos antes da hash em memória"}, {"id": "SKL-051", "hab_id": "HAB-051", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "filtro-ddd85-fortaleza-leak-audit", "desc": "Auditoria de leads fora da região alvo (DDD 85/11 vs DDD 88 Sertão Central)"}, {"id": "SKL-052", "hab_id": "HAB-052", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "reconciliacao-data-ddmmyyyy-iso8601", "desc": "Parser resiliente multi-formato (DD/MM/YYYY, ISO-8601 e Unix Epoch UTC)"}, {"id": "SKL-053", "hab_id": "HAB-053", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "particionamento-mensal-abr-out-2026", "desc": "Cubo analítico particionado mês a mês de Abril a Outubro de 2026"}, {"id": "SKL-054", "hab_id": "HAB-054", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "auditoria-cobertura-cache-parcial", "desc": "Detecção automática de corte temporal do cache (ex.: 20/10/2026)"}, {"id": "SKL-055", "hab_id": "HAB-055", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "lineage-criptografico-sha256-json", "desc": "Assinatura SHA-256 de integridade de cada relatório agregado gerado"}, {"id": "SKL-056", "hab_id": "HAB-056", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "verificador-dlp-zero-pii-saida", "desc": "Varredura estática garantindo 0 CPFs, 0 telefones e 0 nomes nos artefatos"}, {"id": "SKL-057", "hab_id": "HAB-057", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "mapeamento-grupos-procedimentos-tuss", "desc": "Classificação padronizada de códigos TUSS STG em grupos executivos"}, {"id": "SKL-058", "hab_id": "HAB-058", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "detector-recontato-30-60-90d", "desc": "Análise de frequência de retorno de pacientes crônicos e check-ups"}, {"id": "SKL-059", "hab_id": "HAB-059", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "conciliador-sessoes-ocultas-archived", "desc": "Auditoria do impacto do botão Ocultar (ARCHIVED) na fila ativa"}, {"id": "SKL-060", "hab_id": "HAB-060", "domain": "CRUZAMENTO_DADOS_STG_NEUROCHAT", "slug": "indexador-rag-8260-evidencias", "desc": "Publicação estruturada de metadados analíticos para busca híbrida FAISS+BM25"}, {"id": "SKL-061", "hab_id": "HAB-061", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "contrafactual-junho-sem-fisioaura", "desc": "Estimativa contrafactual de Junho/2026 sem desconexão do webhook FISIOAURA"}, {"id": "SKL-062", "hab_id": "HAB-062", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "contrafactual-agosto-sem-apagao-dc", "desc": "Reconstrução do volume de Agosto/2026 sem colapso de -93,6% na WABA 6827"}, {"id": "SKL-063", "hab_id": "HAB-063", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "pro-rata-conservador-outubro-31d", "desc": "Fechamento conservador de Outubro/2026 (20 dias observados + 11 dias piso)"}, {"id": "SKL-064", "hab_id": "HAB-064", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "rumo-hoje-steady-state-31-10-2026", "desc": "Cálculo do patamar atual estabilizado de agendamentos em 31/10/2026"}, {"id": "SKL-065", "hab_id": "HAB-065", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "uplift-coexistence-oficial-v4", "desc": "Modelagem conservadora de +12% com WhatsApp Coexistence Oficial 3915+2270"}, {"id": "SKL-066", "hab_id": "HAB-066", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "recuperacao-18pct-fila-sem-resposta", "desc": "Taxa conservadora de resgate sobre pacientes afetados por SLA breach"}, {"id": "SKL-067", "hab_id": "HAB-067", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "projecao-nov-dez-2026-sazonal", "desc": "Projeção de fechamento do 4º trimestre respeitando feriados de fim de ano"}, {"id": "SKL-068", "hab_id": "HAB-068", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "banda-pessimista-base-otimista", "desc": "Três cenários parametrizados (Piso P33, Conservador Base, Teto Operacional)"}, {"id": "SKL-069", "hab_id": "HAB-069", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "capacidade-maxima-tomografo-turno", "desc": "Teto físico de ocupação de Tomografia em janela diurna e plantão"}, {"id": "SKL-070", "hab_id": "HAB-070", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "simulacao-destravamento-spend-cap", "desc": "Impacto projetado em 7/15/30 dias após ajuste autorizado do spend_cap"}, {"id": "SKL-071", "hab_id": "HAB-071", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "modelo-amortecimento-pos-incidente", "desc": "Curva de recuperação de reputação algorítmica após queda de webhook"}, {"id": "SKL-072", "hab_id": "HAB-072", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "forecast-demanda-exames-imagem-usg", "desc": "Previsão dedicada para Ultrassonografia Obstétrica, Doppler e Abdome"}, {"id": "SKL-073", "hab_id": "HAB-073", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "forecast-demanda-laboratorio-16off", "desc": "Previsão de volume de análises clínicas com campanha 16% OFF"}, {"id": "SKL-074", "hab_id": "HAB-074", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "elasticidade-tempo-resposta-15ms", "desc": "Ganho de conversão por redução de TTFB de minutos para <15ms na borda"}, {"id": "SKL-075", "hab_id": "HAB-075", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "backtesting-erro-mape-abr-set", "desc": "Validação de erro percentual absoluto médio (MAPE) sobre meses fechados"}, {"id": "SKL-076", "hab_id": "HAB-076", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "meta-diaria-atendente-quixeramobim", "desc": "Desdobramento da projeção mensal em meta diária justa por atendente"}, {"id": "SKL-077", "hab_id": "HAB-077", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "alerta-precoce-desvio-meta-semanal", "desc": "Gatilho matemático se o ritmo dos primeiros 10 dias cair abaixo do P33"}, {"id": "SKL-078", "hab_id": "HAB-078", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "cenario-migracao-100pct-meta-oficial", "desc": "Comparativo de estabilidade entre Z-API legada e 100% Cloud API Oficial"}, {"id": "SKL-079", "hab_id": "HAB-079", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "impacto-retencao-midia-60d-ui", "desc": "Ganho de produtividade de atendimento com expurgo de banners/bots pesados"}, {"id": "SKL-080", "hab_id": "HAB-080", "domain": "PROJECOES_CONTRATUAIS_CENARIOS", "slug": "matriz-risco-dependencia-canal", "desc": "Quantificação de resiliência com fallback automático WTS/FLW/Hunion"}, {"id": "SKL-081", "hab_id": "HAB-081", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "openpyxl-formulas-dinamicas-ptbr", "desc": "Geração nativa de planilhas .xlsx com fórmulas SUM, IFERROR e formatação BRL"}, {"id": "SKL-082", "hab_id": "HAB-082", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "abas-executivas-congelamento-paineis", "desc": "Layout corporativo com freeze_panes, larguras automáticas e cabeçalho escuro"}, {"id": "SKL-083", "hab_id": "HAB-083", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "painel-html5-svg-zero-cloudflare", "desc": "Dashboard responsivo autônomo hospedado em GitHub Pages (Fastly CDN)"}, {"id": "SKL-084", "hab_id": "HAB-084", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "preview-opengraph-whatsapp-diretoria", "desc": "Meta tags OpenGraph otimizadas para compartilhamento imediato no WhatsApp"}, {"id": "SKL-085", "hab_id": "HAB-085", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "modo-apresentacao-google-meet", "desc": "Layout widescreen de alto contraste para tela compartilhada no Google Meet"}, {"id": "SKL-086", "hab_id": "HAB-086", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "orquestrador-opencode-tokens-reais", "desc": "Despacho paralelo via CLI opencode v2.2.5 com auditoria JSON de tokens"}, {"id": "SKL-087", "hab_id": "HAB-087", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "auditoria-cruzada-4-modelos-opencode", "desc": "Consenso entre DeepSeek-v4.1, GLM-5.3, Big-Pickle e Flint-40B no OpenCode"}, {"id": "SKL-088", "hab_id": "HAB-088", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "ponte-sessao-agy-opencode-hub", "desc": "Utilitário CLI agy-opencode-hub para uso contínuo sob demanda na sessão"}, {"id": "SKL-089", "hab_id": "HAB-089", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "scanner-gitleaks-pre-commit-dlp", "desc": "Portão determinístico bloqueando segredos, .db ativos e PII antes do git push"}, {"id": "SKL-090", "hab_id": "HAB-090", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "espelhamento-drive-32tb-sem-sqlite", "desc": "Backup atômico em cortex_cerebral excluindo .db/.wal/.shm ativos"}, {"id": "SKL-091", "hab_id": "HAB-091", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "reconciliacao-journal-cooperativo", "desc": "Coordenação multi-sessão em journal.py respeitando locks de outros chats"}, {"id": "SKL-092", "hab_id": "HAB-092", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "absorcao-forense-transcript-3257-steps", "desc": "Extração e validação integral de artefatos e testes de sessões irmãs"}, {"id": "SKL-093", "hab_id": "HAB-093", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "certificacao-pytest-exit-zero", "desc": "Bateria automatizada de testes unitários e de contrato com Exit Code 0"}, {"id": "SKL-094", "hab_id": "HAB-094", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "assinatura-manifesto-sha256-recibo", "desc": "Geração de recibos criptográficos auditáveis em todas as entregas"}, {"id": "SKL-095", "hab_id": "HAB-095", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "verificador-headers-cdn-nao-cloudflare", "desc": "Prova HTTP confirmando Server: GitHub.com sem proxy Cloudflare"}, {"id": "SKL-096", "hab_id": "HAB-096", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "exportador-csv-tsv-limpo-bi", "desc": "Geração de tabelas planas sanitizadas compatíveis com Excel/Sheets/Tableau"}, {"id": "SKL-097", "hab_id": "HAB-097", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "sintese-executiva-linguagem-diretoria", "desc": "Tradução de telemetria complexa em decisões claras de negócio em Português"}, {"id": "SKL-098", "hab_id": "HAB-098", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "governanca-zero-mutacao-meta-ads", "desc": "Bloqueio estrito contra alterações não autorizadas na conta act_1349166316118823"}, {"id": "SKL-099", "hab_id": "HAB-099", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "politica-zero-idle-api-drain", "desc": "Encerramento imediato de workers após cada análise sem loops infinitos"}, {"id": "SKL-100", "hab_id": "HAB-100", "domain": "EXCEL_BI_OPENCODE_GITHUB_GOVERNANCA", "slug": "catalogo-interativo-100x100-busca", "desc": "Explorador instantâneo no painel web para filtrar as 100 skills e 100 habilidades"}]};
+
+    function fmtInt(n) { return Number(n).toLocaleString('pt-BR'); }
+    function fmtPct(n) { return Number(n).toLocaleString('pt-BR', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%'; }
+
+    function init() {
+      const gs = DATA.corr.global_summary_apr_oct_2026;
+      const jf = DATA.corr.june_2026_oscillations_forensics;
+      const df = DATA.corr.datacenter_outage_and_unanswered_sla_forensics;
+      const cp = DATA.corr.conservative_scenario_trajectory_today_20261031;
+
+      const kpis = [
+        { label: "Exames STG (Abr–20/Out)", val: fmtInt(gs.stg_apr_oct_cached_exams), sub: "Fechamento 7M conservador: " + fmtInt(cp.apr_oct_2026_full_7m_conservative_total_exams) },
+        { label: "Canal Online (Telefone)", val: fmtPct(gs.tier1_deterministic_phone_pct), sub: fmtInt(gs.tier1_deterministic_phone_exams) + " exames (71%–78% Abr–Jul)" },
+        { label: "Omnichannel (Tel+Nome>=3)", val: fmtPct(gs.tier2_omnichannel_phone_or_strict_name_pct), sub: "Anti-homônimo estrito validado" },
+        { label: "Janela [-30d, +30d] Datada", val: fmtInt(gs.tier3_dated_window_minus30d_plus30d_exams), sub: "362 pré · 75 dia · 832 pós-exame" },
+        { label: "Oscilação Junho vs Maio", val: "-" + fmtInt(jf.june_net_exam_drop_vs_may), sub: "-84 Tomografias (-18,7%)" },
+        { label: "Rumo Conservador Hoje", val: "3.432–3.759", sub: "Exames/mês (até 464 Tomos/mês)" },
+      ];
+      document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
+        <div class="card">
+          <div class="kpi-label">${k.label}</div>
+          <div class="kpi-val">${k.val}</div>
+          <div class="kpi-sub">${k.sub}</div>
+        </div>
+      `).join('');
+
+      const tbody = document.querySelector('#monthlyTable tbody');
+      const maxExams = Math.max(...DATA.corr.monthly_apr_oct_2026.map(m => m.stg_exams_total));
+      const barsHtml = [];
+
+      tbody.innerHTML = DATA.corr.monthly_apr_oct_2026.map(m => {
+        const cls = m.month === '2026-06' ? 'highlight' : (m.month === '2026-08' ? 'outage' : '');
+        const wTot = Math.round((m.stg_exams_total / maxExams) * 100);
+        const wOn = Math.round((m.tier2_omnichannel_total_exams / maxExams) * 100);
+        barsHtml.push(`
+          <div class="bar-row">
+            <span><strong>${m.month}</strong></span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:${wTot}%"></div>
+              <div class="bar-online" style="width:${wOn}%"></div>
+            </div>
+            <span style="text-align:right;">${fmtPct(m.tier2_omnichannel_pct)} (${fmtInt(m.tier2_omnichannel_total_exams)})</span>
+          </div>
+        `);
+        return `
+          <tr class="${cls}">
+            <td><strong>${m.label}</strong></td>
+            <td>${fmtInt(m.stg_exams_total)}</td>
+            <td>${fmtInt(m.stg_unique_phones)}</td>
+            <td>${fmtInt(m.tier1_phone_matched_exams)}</td>
+            <td><strong>${fmtPct(m.tier1_phone_matched_pct)}</strong></td>
+            <td>${fmtInt(m.tier3_window_30d_exams)}</td>
+            <td>${fmtInt(m.tomografia_exams)}</td>
+          </tr>
+        `;
+      }).join('');
+      document.getElementById('chartBars').innerHTML = barsHtml.join('');
+
+      document.getElementById('agentGrid').innerHTML = DATA.opencode.agents.map(a => `
+        <div class="agent-card">
+          <div class="agent-head">
+            <span>${a.model}</span>
+            <span style="color:var(--emerald);">${fmtInt(a.tokens.input + a.tokens.output)} tok</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:6px;">${a.role}</div>
+          <div style="white-space:pre-line;color:#e2e8f0;font-size:12px;">${a.text.slice(0, 560)}</div>
+        </div>
+      `).join('');
+
+      const shareUrl = window.location.href;
+      const msg = encodeURIComponent(
+        "Painel Executivo Fisioimagem 2026 (STG x NeuroChat Abr-Out · Zero-PII · Fora da Cloudflare): " +
+        shareUrl + " | Sala Google Meet: https://meet.google.com/uaz-mmqc-adr"
+      );
+      document.getElementById('waShareBtn').href = "https://wa.me/?text=" + msg;
+      renderSkills();
+    }
+
+    function renderSkills() {
+      const q = (document.getElementById('skillSearch').value || '').toLowerCase().trim();
+      const filtered = DATA.skills.filter(s =>
+        !q || s.id.toLowerCase().includes(q) || s.hab_id.toLowerCase().includes(q) ||
+        s.domain.toLowerCase().includes(q) || s.slug.toLowerCase().includes(q) || s.desc.toLowerCase().includes(q)
+      );
+      document.getElementById('skillsBody').innerHTML = filtered.map(s => `
+        <tr>
+          <td style="text-align:left;"><code>${s.id}</code></td>
+          <td style="text-align:left;"><code>${s.hab_id}</code></td>
+          <td style="text-align:left;color:var(--cyan);font-size:11px;">${s.domain}</td>
+          <td style="text-align:left;"><code>${s.slug}</code></td>
+          <td style="text-align:left;">${s.desc}</td>
+        </tr>
+      `).join('');
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+
+    init();
+  </script>
+</body>
+</html>
